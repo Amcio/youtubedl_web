@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>YouTube Converter</title>	
+<link href="{{ url_for('static', filename='css/style.css) }}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="ani">
+	<h1 style="font-family: K2D, monospace; color: lightgray">YouTube Downloader</h1>
+	
+<center>
+<div class="form">
+	<form name="url" action="bin/dl.py" method="get">
+		<label for="link" class="inp">
+		<input style="width: 30%;" type="text" id="link" name="link" placeholder="&nbsp;">
+		<span class="label">YouTube Link</span>
+		</label>
+		<br>
+		<input id="mp3" type="radio" name="format" value="mp3">
+		<label for="mp3" class="font-t label">MP3</label>
+		
+		<input id="mp4" type="radio" name="format" value="mp4" style="margin-left: 30px;">
+		<label for="mp4" class="font-t label">MP4</label>
+		<p><input onclick="change()" type="submit" value="Download" id="download")></p>
+	</form>
+	
+	<h5 class="font-r" style="font-size: 12px; color: rgba(200,200,200,1.00);"><a style="text-decoration: none;" class="link" href="/out/">Manual download</a></h5>
+</div>
+</center>
+	<footer class="footer">
+		
+    	<h6 class="font-t marginz inlineblock" style=" float: left">Version: Beta MP4 Support (2.0)</h6>
+    	<h6 class="marginz font-t inlineblock" style=" float: right;"><a class="link" href="https://github.com/Amcio">Amci0</a> &copy; 2018</h6>
+		
+	</footer>
+
+<script type="text/javascript">
+function change() {
+    var btn = document.getElementById("download");
+    if (btn.value == "Download") {
+	btn.value = "Downloading...";
+} else {
+	btn.value = "Download";
+}
+
+}
+</script>
+</body>
+</html>
